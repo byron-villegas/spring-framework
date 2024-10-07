@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "rut": "11.111.111-1",
+    "username": "jbodoq",
+    "nombres": "Juan Carlos",
+    "apellidoPaterno": "Bodoque",
+    "apellidoMaterno": "Bodoque",
+    "email": "jbodoq@gmail.com",
+    "telefono": "987654321",
+    "estado": "VIG",
+    "password": "admin123"
+  }
+]

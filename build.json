@@ -1,0 +1,1595 @@
+{
+    "name": "java-springframework",
+    "group": "cl.springframework",
+    "version": "1.0.0",
+    "java": {
+        "source": "1.8",
+        "target": "1.8"
+    },
+    "dependencies": [
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-web",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-web"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-actuator",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-actuator"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-freemarker",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-freemarker"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-validation",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-validation"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-security",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-security"
+            }
+        },
+        {
+            "group": "org.projectlombok",
+            "version": "1.18.26",
+            "name": "lombok",
+            "module": {
+                "group": "org.projectlombok",
+                "name": "lombok"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-swagger2",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-swagger2"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-swagger-ui",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-swagger-ui"
+            }
+        },
+        {
+            "group": "io.jsonwebtoken",
+            "version": "0.9.1",
+            "name": "jjwt",
+            "module": {
+                "group": "io.jsonwebtoken",
+                "name": "jjwt"
+            }
+        },
+        {
+            "group": "com.google.code.gson",
+            "version": "2.9.0",
+            "name": "gson",
+            "module": {
+                "group": "com.google.code.gson",
+                "name": "gson"
+            }
+        },
+        {
+            "group": "net.sf.jasperreports",
+            "version": "6.11.0",
+            "name": "jasperreports",
+            "module": {
+                "group": "net.sf.jasperreports",
+                "name": "jasperreports"
+            }
+        },
+        {
+            "group": "net.sf.jasperreports",
+            "version": "6.11.0",
+            "name": "jasperreports-fonts",
+            "module": {
+                "group": "net.sf.jasperreports",
+                "name": "jasperreports-fonts"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-test",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-test"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "3.3.0",
+            "name": "rest-assured",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "rest-assured"
+            }
+        },
+        {
+            "group": "org.spockframework",
+            "version": "2.1-groovy-3.0",
+            "name": "spock-spring",
+            "module": {
+                "group": "org.spockframework",
+                "name": "spock-spring"
+            }
+        },
+        {
+            "group": "org.spockframework",
+            "version": "2.1-groovy-3.0",
+            "name": "spock-core",
+            "module": {
+                "group": "org.spockframework",
+                "name": "spock-core"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-java",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-java"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-junit",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-junit"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-json",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-json"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-tomcat",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-tomcat"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-webmvc",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-webmvc"
+            }
+        },
+        {
+            "group": "org.springframework.security",
+            "version": "5.7.7",
+            "name": "spring-security-web",
+            "module": {
+                "group": "org.springframework.security",
+                "name": "spring-security-web"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-web",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-web"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-actuator-autoconfigure",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-actuator-autoconfigure"
+            }
+        },
+        {
+            "group": "io.micrometer",
+            "version": "1.9.8",
+            "name": "micrometer-core",
+            "module": {
+                "group": "io.micrometer",
+                "name": "micrometer-core"
+            }
+        },
+        {
+            "group": "org.freemarker",
+            "version": "2.3.32",
+            "name": "freemarker",
+            "module": {
+                "group": "org.freemarker",
+                "name": "freemarker"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-context-support",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-context-support"
+            }
+        },
+        {
+            "group": "org.apache.tomcat.embed",
+            "version": "9.0.71",
+            "name": "tomcat-embed-el",
+            "module": {
+                "group": "org.apache.tomcat.embed",
+                "name": "tomcat-embed-el"
+            }
+        },
+        {
+            "group": "org.hibernate.validator",
+            "version": "6.2.5.Final",
+            "name": "hibernate-validator",
+            "module": {
+                "group": "org.hibernate.validator",
+                "name": "hibernate-validator"
+            }
+        },
+        {
+            "group": "org.springframework.security",
+            "version": "5.7.7",
+            "name": "spring-security-config",
+            "module": {
+                "group": "org.springframework.security",
+                "name": "spring-security-config"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-swagger-common",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-swagger-common"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-spring-web",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-spring-web"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-schema",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-schema"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-spi",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-spi"
+            }
+        },
+        {
+            "group": "io.springfox",
+            "version": "2.9.2",
+            "name": "springfox-core",
+            "module": {
+                "group": "io.springfox",
+                "name": "springfox-core"
+            }
+        },
+        {
+            "group": "org.springframework.plugin",
+            "version": "1.2.0.RELEASE",
+            "name": "spring-plugin-metadata",
+            "module": {
+                "group": "org.springframework.plugin",
+                "name": "spring-plugin-metadata"
+            }
+        },
+        {
+            "group": "org.springframework.plugin",
+            "version": "1.2.0.RELEASE",
+            "name": "spring-plugin-core",
+            "module": {
+                "group": "org.springframework.plugin",
+                "name": "spring-plugin-core"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-test-autoconfigure",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-test-autoconfigure"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-test",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-test"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-autoconfigure",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-autoconfigure"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-actuator",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-actuator"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot"
+            }
+        },
+        {
+            "group": "org.springframework.security",
+            "version": "5.7.7",
+            "name": "spring-security-core",
+            "module": {
+                "group": "org.springframework.security",
+                "name": "spring-security-core"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-context",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-context"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-aop",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-aop"
+            }
+        },
+        {
+            "group": "io.swagger",
+            "version": "1.5.20",
+            "name": "swagger-models",
+            "module": {
+                "group": "io.swagger",
+                "name": "swagger-models"
+            }
+        },
+        {
+            "group": "io.swagger",
+            "version": "1.5.20",
+            "name": "swagger-annotations",
+            "module": {
+                "group": "io.swagger",
+                "name": "swagger-annotations"
+            }
+        },
+        {
+            "group": "com.google.guava",
+            "version": "20.0",
+            "name": "guava",
+            "module": {
+                "group": "com.google.guava",
+                "name": "guava"
+            }
+        },
+        {
+            "group": "com.fasterxml",
+            "version": "1.5.1",
+            "name": "classmate",
+            "module": {
+                "group": "com.fasterxml",
+                "name": "classmate"
+            }
+        },
+        {
+            "group": "com.jayway.jsonpath",
+            "version": "2.7.0",
+            "name": "json-path",
+            "module": {
+                "group": "com.jayway.jsonpath",
+                "name": "json-path"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-testng",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-testng"
+            }
+        },
+        {
+            "group": "org.testng",
+            "version": "7.5",
+            "name": "testng",
+            "module": {
+                "group": "org.testng",
+                "name": "testng"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-logging",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-logging"
+            }
+        },
+        {
+            "group": "ch.qos.logback",
+            "version": "1.2.11",
+            "name": "logback-classic",
+            "module": {
+                "group": "ch.qos.logback",
+                "name": "logback-classic"
+            }
+        },
+        {
+            "group": "org.apache.logging.log4j",
+            "version": "2.17.2",
+            "name": "log4j-to-slf4j",
+            "module": {
+                "group": "org.apache.logging.log4j",
+                "name": "log4j-to-slf4j"
+            }
+        },
+        {
+            "group": "org.slf4j",
+            "version": "1.7.36",
+            "name": "jul-to-slf4j",
+            "module": {
+                "group": "org.slf4j",
+                "name": "jul-to-slf4j"
+            }
+        },
+        {
+            "group": "org.slf4j",
+            "version": "1.7.36",
+            "name": "slf4j-api",
+            "module": {
+                "group": "org.slf4j",
+                "name": "slf4j-api"
+            }
+        },
+        {
+            "group": "org.mapstruct",
+            "version": "1.2.0.Final",
+            "name": "mapstruct",
+            "module": {
+                "group": "org.mapstruct",
+                "name": "mapstruct"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.datatype",
+            "version": "2.13.5",
+            "name": "jackson-datatype-jsr310",
+            "module": {
+                "group": "com.fasterxml.jackson.datatype",
+                "name": "jackson-datatype-jsr310"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.module",
+            "version": "2.13.5",
+            "name": "jackson-module-parameter-names",
+            "module": {
+                "group": "com.fasterxml.jackson.module",
+                "name": "jackson-module-parameter-names"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.13.5",
+            "name": "jackson-core",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-core"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.13.5",
+            "name": "jackson-annotations",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-annotations"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.datatype",
+            "version": "2.13.5",
+            "name": "jackson-datatype-jdk8",
+            "module": {
+                "group": "com.fasterxml.jackson.datatype",
+                "name": "jackson-datatype-jdk8"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.13.5",
+            "name": "jackson-databind",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-databind"
+            }
+        },
+        {
+            "group": "commons-digester",
+            "version": "2.1",
+            "name": "commons-digester",
+            "module": {
+                "group": "commons-digester",
+                "name": "commons-digester"
+            }
+        },
+        {
+            "group": "commons-beanutils",
+            "version": "1.9.4",
+            "name": "commons-beanutils",
+            "module": {
+                "group": "commons-beanutils",
+                "name": "commons-beanutils"
+            }
+        },
+        {
+            "group": "org.codehaus.castor",
+            "version": "1.4.1",
+            "name": "castor-xml",
+            "module": {
+                "group": "org.codehaus.castor",
+                "name": "castor-xml"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.5.14",
+            "name": "httpmime",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpmime"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.5.14",
+            "name": "httpclient",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpclient"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-bsf",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-bsf"
+            }
+        },
+        {
+            "group": "org.codehaus.castor",
+            "version": "1.4.1",
+            "name": "castor-core",
+            "module": {
+                "group": "org.codehaus.castor",
+                "name": "castor-core"
+            }
+        },
+        {
+            "group": "commons-logging",
+            "version": "1.2",
+            "name": "commons-logging",
+            "module": {
+                "group": "commons-logging",
+                "name": "commons-logging"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "4.2",
+            "name": "commons-collections4",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-collections4"
+            }
+        },
+        {
+            "group": "com.lowagie",
+            "version": "2.1.7.js7",
+            "name": "itext",
+            "module": {
+                "group": "com.lowagie",
+                "name": "itext"
+            }
+        },
+        {
+            "group": "org.jfree",
+            "version": "1.0.19",
+            "name": "jfreechart",
+            "module": {
+                "group": "org.jfree",
+                "name": "jfreechart"
+            }
+        },
+        {
+            "group": "org.jfree",
+            "version": "1.0.23",
+            "name": "jcommon",
+            "module": {
+                "group": "org.jfree",
+                "name": "jcommon"
+            }
+        },
+        {
+            "group": "org.eclipse.jdt.core.compiler",
+            "version": "4.4.2",
+            "name": "ecj",
+            "module": {
+                "group": "org.eclipse.jdt.core.compiler",
+                "name": "ecj"
+            }
+        },
+        {
+            "group": "jakarta.xml.bind",
+            "version": "2.3.3",
+            "name": "jakarta.xml.bind-api",
+            "module": {
+                "group": "jakarta.xml.bind",
+                "name": "jakarta.xml.bind-api"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter"
+            }
+        },
+        {
+            "group": "org.mockito",
+            "version": "4.5.1",
+            "name": "mockito-junit-jupiter",
+            "module": {
+                "group": "org.mockito",
+                "name": "mockito-junit-jupiter"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-test-junit5",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-test-junit5"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-params",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-params"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-engine",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-engine"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-api",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-api"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-launcher",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-launcher"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-engine",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-engine"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-commons",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-commons"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-testkit",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-testkit"
+            }
+        },
+        {
+            "group": "org.assertj",
+            "version": "3.22.0",
+            "name": "assertj-core",
+            "module": {
+                "group": "org.assertj",
+                "name": "assertj-core"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest-library",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-library"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-test",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-test"
+            }
+        },
+        {
+            "group": "junit",
+            "version": "4.13.2",
+            "name": "junit",
+            "module": {
+                "group": "junit",
+                "name": "junit"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest-core",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-core"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest"
+            }
+        },
+        {
+            "group": "org.mockito",
+            "version": "4.5.1",
+            "name": "mockito-core",
+            "module": {
+                "group": "org.mockito",
+                "name": "mockito-core"
+            }
+        },
+        {
+            "group": "org.skyscreamer",
+            "version": "1.5.1",
+            "name": "jsonassert",
+            "module": {
+                "group": "org.skyscreamer",
+                "name": "jsonassert"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-test",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-test"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-beans",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-beans"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-expression",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-expression"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-core",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-core"
+            }
+        },
+        {
+            "group": "org.xmlunit",
+            "version": "2.9.1",
+            "name": "xmlunit-core",
+            "module": {
+                "group": "org.xmlunit",
+                "name": "xmlunit-core"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "4.5.1",
+            "name": "xml-path",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "xml-path"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-groovysh",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-groovysh"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-servlet",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-servlet"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-console",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-console"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-ant",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-ant"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-groovydoc",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-groovydoc"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-docgenerator",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-docgenerator"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-templates",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-templates"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-xml",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-xml"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "4.5.1",
+            "name": "json-path",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "json-path"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-cli-picocli",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-cli-picocli"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-datetime",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-datetime"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-jmx",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-jmx"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-json",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-json"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-jsr223",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-jsr223"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-macro",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-macro"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-nio",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-nio"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-sql",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-sql"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-swing",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-swing"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "4.5.1",
+            "name": "rest-assured-common",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "rest-assured-common"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy"
+            }
+        },
+        {
+            "group": "org.ccil.cowan.tagsoup",
+            "version": "1.2.1",
+            "name": "tagsoup",
+            "module": {
+                "group": "org.ccil.cowan.tagsoup",
+                "name": "tagsoup"
+            }
+        },
+        {
+            "group": "org.jetbrains",
+            "version": "20.1.0",
+            "name": "annotations",
+            "module": {
+                "group": "org.jetbrains",
+                "name": "annotations"
+            }
+        },
+        {
+            "group": "net.minidev",
+            "version": "2.4.8",
+            "name": "json-smart",
+            "module": {
+                "group": "net.minidev",
+                "name": "json-smart"
+            }
+        },
+        {
+            "group": "net.minidev",
+            "version": "2.4.8",
+            "name": "accessors-smart",
+            "module": {
+                "group": "net.minidev",
+                "name": "accessors-smart"
+            }
+        },
+        {
+            "group": "org.ow2.asm",
+            "version": "9.2",
+            "name": "asm",
+            "module": {
+                "group": "org.ow2.asm",
+                "name": "asm"
+            }
+        },
+        {
+            "group": "net.bytebuddy",
+            "version": "1.12.23",
+            "name": "byte-buddy",
+            "module": {
+                "group": "net.bytebuddy",
+                "name": "byte-buddy"
+            }
+        },
+        {
+            "group": "cglib",
+            "version": "3.3.0",
+            "name": "cglib-nodep",
+            "module": {
+                "group": "cglib",
+                "name": "cglib-nodep"
+            }
+        },
+        {
+            "group": "org.objenesis",
+            "version": "3.2",
+            "name": "objenesis",
+            "module": {
+                "group": "org.objenesis",
+                "name": "objenesis"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-core",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-core"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "10.3.0",
+            "name": "cucumber-expressions",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-expressions"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "3.5.0",
+            "name": "datatable",
+            "module": {
+                "group": "io.cucumber",
+                "name": "datatable"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-gherkin-messages",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-gherkin-messages"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-gherkin",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-gherkin"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-plugin",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-plugin"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "docstring",
+            "module": {
+                "group": "io.cucumber",
+                "name": "docstring"
+            }
+        },
+        {
+            "group": "org.apiguardian",
+            "version": "1.1.1",
+            "name": "apiguardian-api",
+            "module": {
+                "group": "org.apiguardian",
+                "name": "apiguardian-api"
+            }
+        },
+        {
+            "group": "jakarta.annotation",
+            "version": "1.3.5",
+            "name": "jakarta.annotation-api",
+            "module": {
+                "group": "jakarta.annotation",
+                "name": "jakarta.annotation-api"
+            }
+        },
+        {
+            "group": "org.yaml",
+            "version": "1.30",
+            "name": "snakeyaml",
+            "module": {
+                "group": "org.yaml",
+                "name": "snakeyaml"
+            }
+        },
+        {
+            "group": "org.apache.tomcat.embed",
+            "version": "9.0.71",
+            "name": "tomcat-embed-websocket",
+            "module": {
+                "group": "org.apache.tomcat.embed",
+                "name": "tomcat-embed-websocket"
+            }
+        },
+        {
+            "group": "org.apache.tomcat.embed",
+            "version": "9.0.71",
+            "name": "tomcat-embed-core",
+            "module": {
+                "group": "org.apache.tomcat.embed",
+                "name": "tomcat-embed-core"
+            }
+        },
+        {
+            "group": "org.hdrhistogram",
+            "version": "2.1.12",
+            "name": "HdrHistogram",
+            "module": {
+                "group": "org.hdrhistogram",
+                "name": "HdrHistogram"
+            }
+        },
+        {
+            "group": "org.latencyutils",
+            "version": "2.0.3",
+            "name": "LatencyUtils",
+            "module": {
+                "group": "org.latencyutils",
+                "name": "LatencyUtils"
+            }
+        },
+        {
+            "group": "jakarta.validation",
+            "version": "2.0.2",
+            "name": "jakarta.validation-api",
+            "module": {
+                "group": "jakarta.validation",
+                "name": "jakarta.validation-api"
+            }
+        },
+        {
+            "group": "org.jboss.logging",
+            "version": "3.4.3.Final",
+            "name": "jboss-logging",
+            "module": {
+                "group": "org.jboss.logging",
+                "name": "jboss-logging"
+            }
+        },
+        {
+            "group": "commons-collections",
+            "version": "3.2.2",
+            "name": "commons-collections",
+            "module": {
+                "group": "commons-collections",
+                "name": "commons-collections"
+            }
+        },
+        {
+            "group": "org.bouncycastle",
+            "version": "1.62",
+            "name": "bcprov-jdk15on",
+            "module": {
+                "group": "org.bouncycastle",
+                "name": "bcprov-jdk15on"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "3.12.0",
+            "name": "commons-lang3",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-lang3"
+            }
+        },
+        {
+            "group": "javax.inject",
+            "version": "1",
+            "name": "javax.inject",
+            "module": {
+                "group": "javax.inject",
+                "name": "javax.inject"
+            }
+        },
+        {
+            "group": "jakarta.activation",
+            "version": "1.2.2",
+            "name": "jakarta.activation-api",
+            "module": {
+                "group": "jakarta.activation",
+                "name": "jakarta.activation-api"
+            }
+        },
+        {
+            "group": "net.bytebuddy",
+            "version": "1.12.23",
+            "name": "byte-buddy-agent",
+            "module": {
+                "group": "net.bytebuddy",
+                "name": "byte-buddy-agent"
+            }
+        },
+        {
+            "group": "com.vaadin.external.google",
+            "version": "0.0.20131108.vaadin1",
+            "name": "android-json",
+            "module": {
+                "group": "com.vaadin.external.google",
+                "name": "android-json"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-jcl",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-jcl"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.4.16",
+            "name": "httpcore",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpcore"
+            }
+        },
+        {
+            "group": "commons-codec",
+            "version": "1.15",
+            "name": "commons-codec",
+            "module": {
+                "group": "commons-codec",
+                "name": "commons-codec"
+            }
+        },
+        {
+            "group": "org.apache.ant",
+            "version": "1.10.12",
+            "name": "ant-junit",
+            "module": {
+                "group": "org.apache.ant",
+                "name": "ant-junit"
+            }
+        },
+        {
+            "group": "org.apache.ant",
+            "version": "1.10.12",
+            "name": "ant",
+            "module": {
+                "group": "org.apache.ant",
+                "name": "ant"
+            }
+        },
+        {
+            "group": "org.apache.ant",
+            "version": "1.10.12",
+            "name": "ant-launcher",
+            "module": {
+                "group": "org.apache.ant",
+                "name": "ant-launcher"
+            }
+        },
+        {
+            "group": "org.apache.ant",
+            "version": "1.10.12",
+            "name": "ant-antlr",
+            "module": {
+                "group": "org.apache.ant",
+                "name": "ant-antlr"
+            }
+        },
+        {
+            "group": "bsf",
+            "version": "2.4.0",
+            "name": "bsf",
+            "module": {
+                "group": "bsf",
+                "name": "bsf"
+            }
+        },
+        {
+            "group": "info.picocli",
+            "version": "4.6.3",
+            "name": "picocli",
+            "module": {
+                "group": "info.picocli",
+                "name": "picocli"
+            }
+        },
+        {
+            "group": "com.thoughtworks.qdox",
+            "version": "1.12.1",
+            "name": "qdox",
+            "module": {
+                "group": "com.thoughtworks.qdox",
+                "name": "qdox"
+            }
+        },
+        {
+            "group": "com.github.javaparser",
+            "version": "3.24.2",
+            "name": "javaparser-core",
+            "module": {
+                "group": "com.github.javaparser",
+                "name": "javaparser-core"
+            }
+        },
+        {
+            "group": "jline",
+            "version": "2.14.6",
+            "name": "jline",
+            "module": {
+                "group": "jline",
+                "name": "jline"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "13.0.0",
+            "name": "html-formatter",
+            "module": {
+                "group": "io.cucumber",
+                "name": "html-formatter"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "4.0.0",
+            "name": "create-meta",
+            "module": {
+                "group": "io.cucumber",
+                "name": "create-meta"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "15.0.0",
+            "name": "messages",
+            "module": {
+                "group": "io.cucumber",
+                "name": "messages"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "3.0.1",
+            "name": "tag-expressions",
+            "module": {
+                "group": "io.cucumber",
+                "name": "tag-expressions"
+            }
+        },
+        {
+            "group": "org.springframework.security",
+            "version": "5.7.7",
+            "name": "spring-security-crypto",
+            "module": {
+                "group": "org.springframework.security",
+                "name": "spring-security-crypto"
+            }
+        },
+        {
+            "group": "org.opentest4j",
+            "version": "1.2.0",
+            "name": "opentest4j",
+            "module": {
+                "group": "org.opentest4j",
+                "name": "opentest4j"
+            }
+        },
+        {
+            "group": "com.beust",
+            "version": "1.78",
+            "name": "jcommander",
+            "module": {
+                "group": "com.beust",
+                "name": "jcommander"
+            }
+        },
+        {
+            "group": "org.webjars",
+            "version": "3.5.1",
+            "name": "jquery",
+            "module": {
+                "group": "org.webjars",
+                "name": "jquery"
+            }
+        },
+        {
+            "group": "ch.qos.logback",
+            "version": "1.2.11",
+            "name": "logback-core",
+            "module": {
+                "group": "ch.qos.logback",
+                "name": "logback-core"
+            }
+        },
+        {
+            "group": "org.apache.logging.log4j",
+            "version": "2.17.2",
+            "name": "log4j-api",
+            "module": {
+                "group": "org.apache.logging.log4j",
+                "name": "log4j-api"
+            }
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+import groovy.json.JsonOutput
+
+buildscript {
+    ext {
+        projectName = 'java-springframework'
+        springBootVersion = '2.7.9'
+        jacocoLogVersion = '1.0.1'
+        springFoxVersion = '2.9.2'
+        lombokVersion = '1.18.26'
+        jjwtVersion = '0.9.1'
+        gsonVersion = '2.9.0'
+        jasperReportsVersion = '6.11.0'
+        spockVersion = '2.1-groovy-3.0'
+        groovyAllVersion = '2.5.0'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'jacoco'
+    id 'org.barfuin.gradle.jacocolog' version "${jacocoLogVersion}"
+}
+
+apply plugin: "io.spring.dependency-management"
+apply from: 'test.gradle'
+apply from: 'coverage.gradle'
+
+group = 'cl.springframework'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    acceptanceTestImplementation.extendsFrom testImplementation
+    acceptanceTestRuntime.extendsFrom testRuntimeOnly
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "org.springframework.boot:spring-boot-starter-freemarker"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation 'org.projectlombok:lombok:1.18.26'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // SWAGGER
+    implementation "io.springfox:springfox-swagger2:${springFoxVersion}"
+    implementation "io.springfox:springfox-swagger-ui:${springFoxVersion}"
+
+    // UTIL
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    acceptanceTestAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    implementation "io.jsonwebtoken:jjwt:${jjwtVersion}"
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+
+    // REST ASSURED
+    testImplementation 'io.rest-assured:rest-assured:3.3.0'
+
+    // REPORTS
+    implementation "net.sf.jasperreports:jasperreports:${jasperReportsVersion}"
+    implementation "net.sf.jasperreports:jasperreports-fonts:${jasperReportsVersion}"
+
+    // JUNIT TEST
+    testImplementation "org.spockframework:spock-core:${spockVersion}"
+    testImplementation "org.spockframework:spock-spring:${spockVersion}"
+    testImplementation "org.codehaus.groovy:groovy-all:${groovyAllVersion}"
+
+    // ACCEPTANCE TEST
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('generateBuildJsonFile') {
+    def projectInformation = String.format('"name":"%s", "group":"%s", "version":"%s"', project.name, project.group, project.version)
+    def javaFormat = String.format('"java": {"source":"%s","target":"%s"}', sourceCompatibility, targetCompatibility)
+    def dependencies = '"dependencies": ['
+    def json = '{' + projectInformation + ',' + javaFormat + ',' + dependencies
+    def i = 0
+
+    configurations.testRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        i++
+        json += JsonOutput.toJson(artifact.moduleVersion.id)
+
+        if(i < configurations.testRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.size()) {
+            json += ","
+        }
+    }
+
+    json += "]}"
+    json = JsonOutput.prettyPrint(json)
+    new File(projectDir, buildscript.sourceFile.name.replace('gradle', 'json')).text = json
+}
+
+build.dependsOn generateBuildJsonFile
