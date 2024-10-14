@@ -42,3 +42,17 @@ jobs:
       run: chmod +x gradlew
     - name: Test with Gradle
       run: ./gradlew test
+  deploy:
+    needs: [build, unit-test]
+    runs-on: ubuntu-latest
+    env:
+      RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+    steps:
+      - name: Deploy With Hook
+        run: curl -X POST $RENDER_DEPLOY_HOOK > deploy.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deploy
+          path: deploy.json
+      - name: Sleep By Two Minutes
+        run: sleep 120
