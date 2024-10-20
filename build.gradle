@@ -2,7 +2,7 @@ import groovy.json.JsonOutput
 
 buildscript {
     ext {
-        projectName = 'java-springframework'
+        projectName = 'springframework'
         springBootVersion = '2.7.9'
         jacocoLogVersion = '1.0.1'
         springFoxVersion = '2.9.2'

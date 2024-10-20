@@ -17,7 +17,7 @@ server:
 
 spring:
   application:
-    name: java-springframework-${swagger.version}
+    name: springframework-${swagger.version}
   profiles:
     active: default
   mvc:
