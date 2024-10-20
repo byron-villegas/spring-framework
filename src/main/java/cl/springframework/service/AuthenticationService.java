@@ -27,6 +27,7 @@ public class AuthenticationService {
     private final JwtTokenUtil jwtTokenUtil;
 
     public AuthenticationResponseDTO auth(final String authorization, final AuthenticationRequestDTO authenticationRequestDTO) {
+        log.info("Auth [{}]", authenticationRequestDTO);
 
         if(ObjectUtils.isEmpty(authorization) || !authorization.toUpperCase().startsWith(Constants.BASIC.toUpperCase() + Constants.SPACE)) {
             throw new ErrorNegocioException(ErrorEnum.EXT001.getCodigo(), ErrorEnum.EXT001.getMensaje());

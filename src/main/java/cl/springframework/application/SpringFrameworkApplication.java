@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan(basePackages = {"cl.springframework"})
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
-public class JavaSpringFrameworkApplication {
+public class SpringFrameworkApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaSpringFrameworkApplication.class, args);
+        SpringApplication.run(SpringFrameworkApplication.class, args);
     }
 }

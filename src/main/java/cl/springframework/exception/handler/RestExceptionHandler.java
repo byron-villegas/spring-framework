@@ -5,6 +5,7 @@ import cl.springframework.dto.ValidacionesParametrosErrorDTO;
 import cl.springframework.exception.ErrorNegocioException;
 import cl.springframework.exception.ErrorTecnicoException;
 import cl.springframework.util.ValidacionesParametrosUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import javax.validation.ConstraintViolationException;
 
+@Slf4j
 @ControllerAdvice
 public class RestExceptionHandler {
     private static final String ERROR = "Error";
@@ -36,6 +38,7 @@ public class RestExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<Object> handleException(Exception exception) {
+        log.error("Exception [{}, {}]", exception.getMessage(), exception.getLocalizedMessage());
         final ErrorDTO errorDTO = ErrorDTO
                 .builder()
                 .codigo(ERROR)
