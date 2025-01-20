@@ -46,7 +46,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: tests
-        path: build/reports/tests
+        path: build/reports/tests/test
     - uses: actions/upload-artifact@v4
       with:
         name: jacocoReport
@@ -102,4 +102,7 @@ jobs:
         run: chmod +x gradlew
       - name: Test with Gradle
         run: ./gradlew acceptanceTest
-      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: acceptanceTest
+          path: build/reports/tests/acceptanceTest
