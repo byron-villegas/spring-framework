@@ -76,7 +76,7 @@ jobs:
     - name: Run JMeter Performance Tests
       run: jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o performance-test/jmeter-result
     - name: Upload JMeter Results
-      uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: jmeter-results
         path: performance-test/jmeter-results
@@ -101,7 +101,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Test with Gradle
-        run: ./gradlew acceptanceTest
+        run: ./gradlew acceptanceTest --debug
       - uses: actions/upload-artifact@v4
         with:
           name: acceptanceTest
