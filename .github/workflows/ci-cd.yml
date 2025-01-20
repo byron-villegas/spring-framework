@@ -17,6 +17,7 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+        cache: gradle
     - name: Set up Gradle
       uses: gradle/gradle-build-action@v2
     - name: Grant execute permission for gradlew
@@ -56,3 +57,41 @@ jobs:
           path: deploy.json
       - name: Sleep By Two Minutes
         run: sleep 120
+  performance-test:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Install JMeter
+      run: sudo apt-get install -y jmeter
+    - name: Run JMeter Performance Tests
+      run: jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o performance-test/jmeter-result
+    - name: Upload JMeter Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: jmeter-results
+        path: performance-test/results.jtl
+  acceptance-test:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    env:
+      AMBIENTE: dev
+      CONTEXT_PATH: api
+      HOST: https://springframework.onrender.com
+      PORT: 443
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Test with Gradle
+        run: ./gradlew acceptanceTest
+      
