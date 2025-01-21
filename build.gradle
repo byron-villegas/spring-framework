@@ -63,8 +63,8 @@ dependencies {
     // UTIL
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testImplementation "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    acceptanceTestAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     implementation "io.jsonwebtoken:jjwt:${jjwtVersion}"
     implementation "com.google.code.gson:gson:${gsonVersion}"
