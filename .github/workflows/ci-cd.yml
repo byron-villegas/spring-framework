@@ -77,10 +77,10 @@ jobs:
         tar -xzf apache-jmeter-5.5.tgz
         sudo mv apache-jmeter-5.5 /opt/apache-jmeter
         echo "JMETER_HOME=/opt/apache-jmeter" >> $GITHUB_ENV
+    - name: Create JMeter results directory
+      run: mkdir -p /performance-test/jmeter-result
     - name: Run JMeter Performance Tests
       run: ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /performance-test/jmeter-result
-    - name: Show file list
-      run: ls
     - uses: actions/upload-artifact@v4
       with:
         name: jmeter-results
