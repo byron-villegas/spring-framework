@@ -64,7 +64,7 @@ jobs:
           name: deploy
           path: deploy.json
       - name: Sleep By Two Minutes
-        run: sleep 120
+        run: sleep 240
   performance-test:
     needs: [deploy]
     runs-on: ubuntu-latest
@@ -100,7 +100,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Test with Gradle
-        run: ./gradlew acceptanceTest --debug
+        run: ./gradlew acceptanceTest
       - uses: actions/upload-artifact@v4
         with:
           name: acceptanceTest
