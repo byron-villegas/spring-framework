@@ -63,8 +63,8 @@ jobs:
         with:
           name: deploy
           path: deploy.json
-      - name: Sleep By Two Minutes
-        run: sleep 120
+      - name: Sleep By Four Minutes
+        run: sleep 240
   performance-test:
     needs: [deploy]
     runs-on: ubuntu-latest
@@ -78,11 +78,11 @@ jobs:
         sudo mv apache-jmeter-5.5 /opt/apache-jmeter
         echo "JMETER_HOME=/opt/apache-jmeter" >> $GITHUB_ENV
     - name: Run JMeter Performance Tests
-      run: ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o performance-test/jmeter-result
+      run: ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /jmeter-result
     - uses: actions/upload-artifact@v4
       with:
         name: jmeter-results
-        path: performance-test/jmeter-results
+        path: /jmeter-result
   acceptance-test:
     needs: [deploy]
     runs-on: ubuntu-latest
