@@ -53,15 +53,6 @@
             }
         },
         {
-            "group": "org.projectlombok",
-            "version": "1.18.26",
-            "name": "lombok",
-            "module": {
-                "group": "org.projectlombok",
-                "name": "lombok"
-            }
-        },
-        {
             "group": "io.springfox",
             "version": "2.9.2",
             "name": "springfox-swagger2",
@@ -77,6 +68,15 @@
             "module": {
                 "group": "io.springfox",
                 "name": "springfox-swagger-ui"
+            }
+        },
+        {
+            "group": "org.projectlombok",
+            "version": "1.18.26",
+            "name": "lombok",
+            "module": {
+                "group": "org.projectlombok",
+                "name": "lombok"
             }
         },
         {
@@ -116,21 +116,21 @@
             }
         },
         {
-            "group": "org.springframework.boot",
-            "version": "2.7.9",
-            "name": "spring-boot-starter-test",
-            "module": {
-                "group": "org.springframework.boot",
-                "name": "spring-boot-starter-test"
-            }
-        },
-        {
             "group": "io.rest-assured",
             "version": "3.3.0",
             "name": "rest-assured",
             "module": {
                 "group": "io.rest-assured",
                 "name": "rest-assured"
+            }
+        },
+        {
+            "group": "org.springframework.boot",
+            "version": "2.7.9",
+            "name": "spring-boot-starter-test",
+            "module": {
+                "group": "org.springframework.boot",
+                "name": "spring-boot-starter-test"
             }
         },
         {
@@ -710,222 +710,6 @@
             }
         },
         {
-            "group": "jakarta.xml.bind",
-            "version": "2.3.3",
-            "name": "jakarta.xml.bind-api",
-            "module": {
-                "group": "jakarta.xml.bind",
-                "name": "jakarta.xml.bind-api"
-            }
-        },
-        {
-            "group": "org.junit.jupiter",
-            "version": "5.8.2",
-            "name": "junit-jupiter",
-            "module": {
-                "group": "org.junit.jupiter",
-                "name": "junit-jupiter"
-            }
-        },
-        {
-            "group": "org.mockito",
-            "version": "4.5.1",
-            "name": "mockito-junit-jupiter",
-            "module": {
-                "group": "org.mockito",
-                "name": "mockito-junit-jupiter"
-            }
-        },
-        {
-            "group": "org.codehaus.groovy",
-            "version": "3.0.15",
-            "name": "groovy-test-junit5",
-            "module": {
-                "group": "org.codehaus.groovy",
-                "name": "groovy-test-junit5"
-            }
-        },
-        {
-            "group": "org.junit.jupiter",
-            "version": "5.8.2",
-            "name": "junit-jupiter-params",
-            "module": {
-                "group": "org.junit.jupiter",
-                "name": "junit-jupiter-params"
-            }
-        },
-        {
-            "group": "org.junit.jupiter",
-            "version": "5.8.2",
-            "name": "junit-jupiter-engine",
-            "module": {
-                "group": "org.junit.jupiter",
-                "name": "junit-jupiter-engine"
-            }
-        },
-        {
-            "group": "org.junit.jupiter",
-            "version": "5.8.2",
-            "name": "junit-jupiter-api",
-            "module": {
-                "group": "org.junit.jupiter",
-                "name": "junit-jupiter-api"
-            }
-        },
-        {
-            "group": "org.junit.platform",
-            "version": "1.8.2",
-            "name": "junit-platform-launcher",
-            "module": {
-                "group": "org.junit.platform",
-                "name": "junit-platform-launcher"
-            }
-        },
-        {
-            "group": "org.junit.platform",
-            "version": "1.8.2",
-            "name": "junit-platform-engine",
-            "module": {
-                "group": "org.junit.platform",
-                "name": "junit-platform-engine"
-            }
-        },
-        {
-            "group": "org.junit.platform",
-            "version": "1.8.2",
-            "name": "junit-platform-commons",
-            "module": {
-                "group": "org.junit.platform",
-                "name": "junit-platform-commons"
-            }
-        },
-        {
-            "group": "org.junit.platform",
-            "version": "1.8.2",
-            "name": "junit-platform-testkit",
-            "module": {
-                "group": "org.junit.platform",
-                "name": "junit-platform-testkit"
-            }
-        },
-        {
-            "group": "org.assertj",
-            "version": "3.22.0",
-            "name": "assertj-core",
-            "module": {
-                "group": "org.assertj",
-                "name": "assertj-core"
-            }
-        },
-        {
-            "group": "org.hamcrest",
-            "version": "2.2",
-            "name": "hamcrest-library",
-            "module": {
-                "group": "org.hamcrest",
-                "name": "hamcrest-library"
-            }
-        },
-        {
-            "group": "org.codehaus.groovy",
-            "version": "3.0.15",
-            "name": "groovy-test",
-            "module": {
-                "group": "org.codehaus.groovy",
-                "name": "groovy-test"
-            }
-        },
-        {
-            "group": "junit",
-            "version": "4.13.2",
-            "name": "junit",
-            "module": {
-                "group": "junit",
-                "name": "junit"
-            }
-        },
-        {
-            "group": "org.hamcrest",
-            "version": "2.2",
-            "name": "hamcrest-core",
-            "module": {
-                "group": "org.hamcrest",
-                "name": "hamcrest-core"
-            }
-        },
-        {
-            "group": "org.hamcrest",
-            "version": "2.2",
-            "name": "hamcrest",
-            "module": {
-                "group": "org.hamcrest",
-                "name": "hamcrest"
-            }
-        },
-        {
-            "group": "org.mockito",
-            "version": "4.5.1",
-            "name": "mockito-core",
-            "module": {
-                "group": "org.mockito",
-                "name": "mockito-core"
-            }
-        },
-        {
-            "group": "org.skyscreamer",
-            "version": "1.5.1",
-            "name": "jsonassert",
-            "module": {
-                "group": "org.skyscreamer",
-                "name": "jsonassert"
-            }
-        },
-        {
-            "group": "org.springframework",
-            "version": "5.3.25",
-            "name": "spring-test",
-            "module": {
-                "group": "org.springframework",
-                "name": "spring-test"
-            }
-        },
-        {
-            "group": "org.springframework",
-            "version": "5.3.25",
-            "name": "spring-beans",
-            "module": {
-                "group": "org.springframework",
-                "name": "spring-beans"
-            }
-        },
-        {
-            "group": "org.springframework",
-            "version": "5.3.25",
-            "name": "spring-expression",
-            "module": {
-                "group": "org.springframework",
-                "name": "spring-expression"
-            }
-        },
-        {
-            "group": "org.springframework",
-            "version": "5.3.25",
-            "name": "spring-core",
-            "module": {
-                "group": "org.springframework",
-                "name": "spring-core"
-            }
-        },
-        {
-            "group": "org.xmlunit",
-            "version": "2.9.1",
-            "name": "xmlunit-core",
-            "module": {
-                "group": "org.xmlunit",
-                "name": "xmlunit-core"
-            }
-        },
-        {
             "group": "io.rest-assured",
             "version": "4.5.1",
             "name": "xml-path",
@@ -1097,6 +881,24 @@
             }
         },
         {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-test",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-test"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "3.0.15",
+            "name": "groovy-test-junit5",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-test-junit5"
+            }
+        },
+        {
             "group": "io.rest-assured",
             "version": "4.5.1",
             "name": "rest-assured-common",
@@ -1115,12 +917,210 @@
             }
         },
         {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest-library",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-library"
+            }
+        },
+        {
+            "group": "junit",
+            "version": "4.13.2",
+            "name": "junit",
+            "module": {
+                "group": "junit",
+                "name": "junit"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest-core",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-core"
+            }
+        },
+        {
             "group": "org.ccil.cowan.tagsoup",
             "version": "1.2.1",
             "name": "tagsoup",
             "module": {
                 "group": "org.ccil.cowan.tagsoup",
                 "name": "tagsoup"
+            }
+        },
+        {
+            "group": "jakarta.xml.bind",
+            "version": "2.3.3",
+            "name": "jakarta.xml.bind-api",
+            "module": {
+                "group": "jakarta.xml.bind",
+                "name": "jakarta.xml.bind-api"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter"
+            }
+        },
+        {
+            "group": "org.mockito",
+            "version": "4.5.1",
+            "name": "mockito-junit-jupiter",
+            "module": {
+                "group": "org.mockito",
+                "name": "mockito-junit-jupiter"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-params",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-params"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-engine",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-engine"
+            }
+        },
+        {
+            "group": "org.junit.jupiter",
+            "version": "5.8.2",
+            "name": "junit-jupiter-api",
+            "module": {
+                "group": "org.junit.jupiter",
+                "name": "junit-jupiter-api"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-launcher",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-launcher"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-engine",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-engine"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-commons",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-commons"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.8.2",
+            "name": "junit-platform-testkit",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-testkit"
+            }
+        },
+        {
+            "group": "org.assertj",
+            "version": "3.22.0",
+            "name": "assertj-core",
+            "module": {
+                "group": "org.assertj",
+                "name": "assertj-core"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "2.2",
+            "name": "hamcrest",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest"
+            }
+        },
+        {
+            "group": "org.mockito",
+            "version": "4.5.1",
+            "name": "mockito-core",
+            "module": {
+                "group": "org.mockito",
+                "name": "mockito-core"
+            }
+        },
+        {
+            "group": "org.skyscreamer",
+            "version": "1.5.1",
+            "name": "jsonassert",
+            "module": {
+                "group": "org.skyscreamer",
+                "name": "jsonassert"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-test",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-test"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-beans",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-beans"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-expression",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-expression"
+            }
+        },
+        {
+            "group": "org.springframework",
+            "version": "5.3.25",
+            "name": "spring-core",
+            "module": {
+                "group": "org.springframework",
+                "name": "spring-core"
+            }
+        },
+        {
+            "group": "org.xmlunit",
+            "version": "2.9.1",
+            "name": "xmlunit-core",
+            "module": {
+                "group": "org.xmlunit",
+                "name": "xmlunit-core"
             }
         },
         {
@@ -1367,6 +1367,24 @@
             }
         },
         {
+            "group": "org.apache.httpcomponents",
+            "version": "4.4.16",
+            "name": "httpcore",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpcore"
+            }
+        },
+        {
+            "group": "commons-codec",
+            "version": "1.15",
+            "name": "commons-codec",
+            "module": {
+                "group": "commons-codec",
+                "name": "commons-codec"
+            }
+        },
+        {
             "group": "jakarta.activation",
             "version": "1.2.2",
             "name": "jakarta.activation-api",
@@ -1400,24 +1418,6 @@
             "module": {
                 "group": "org.springframework",
                 "name": "spring-jcl"
-            }
-        },
-        {
-            "group": "org.apache.httpcomponents",
-            "version": "4.4.16",
-            "name": "httpcore",
-            "module": {
-                "group": "org.apache.httpcomponents",
-                "name": "httpcore"
-            }
-        },
-        {
-            "group": "commons-codec",
-            "version": "1.15",
-            "name": "commons-codec",
-            "module": {
-                "group": "commons-codec",
-                "name": "commons-codec"
             }
         },
         {

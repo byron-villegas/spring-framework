@@ -53,15 +53,13 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-freemarker"
     implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.springframework.boot:spring-boot-starter-security"
-    implementation 'org.projectlombok:lombok:1.18.26'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // SWAGGER
     implementation "io.springfox:springfox-swagger2:${springFoxVersion}"
     implementation "io.springfox:springfox-swagger-ui:${springFoxVersion}"
 
     // UTIL
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    implementation 'org.projectlombok:lombok:1.18.26'
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testImplementation "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
@@ -77,6 +75,7 @@ dependencies {
     implementation "net.sf.jasperreports:jasperreports-fonts:${jasperReportsVersion}"
 
     // JUNIT TEST
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation "org.spockframework:spock-core:${spockVersion}"
     testImplementation "org.spockframework:spock-spring:${spockVersion}"
     testImplementation "org.codehaus.groovy:groovy-all:${groovyAllVersion}"
