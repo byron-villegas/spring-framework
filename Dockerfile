@@ -4,11 +4,18 @@ COPY --chown=gradle:gradle . /project/src
 WORKDIR /project/src
 RUN gradle build
 
+# Install Arial font
+FROM debian:latest as fonts
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ttf-mscorefonts-installer && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # JDK 8
 FROM openjdk:8
 
-# Install Arial font
-RUN apt-get update; apt-get install -y ttf-mscorefonts-installer fontconfig
+# Copy fonts from the fonts stage
+COPY --from=fonts /usr/share/fonts /usr/share/fonts
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
