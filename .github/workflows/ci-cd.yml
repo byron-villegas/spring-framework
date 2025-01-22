@@ -106,7 +106,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Test with Gradle
-        run: ./gradlew acceptanceTest --debug
+        run: ./gradlew acceptanceTest
       - uses: actions/upload-artifact@v4
         with:
           name: acceptanceTest
