@@ -1,17 +1,12 @@
 package cl.springframework.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
-
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.nio.file.FileSystemNotFoundException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+@Slf4j
 public class FileUtil {
 
     private FileUtil() {
@@ -40,7 +35,8 @@ public class FileUtil {
 
             return fileContents.toString();
         } catch(Exception ex) {
-            throw new FileSystemNotFoundException("Archivo no encontrado " + ex.getMessage());
+            log.error("Archivo no encontrado [{}]", ex.getMessage());
+            throw new FileSystemNotFoundException("Archivo no encontrado");
         }
     }
 }
