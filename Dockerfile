@@ -6,10 +6,11 @@ RUN gradle build
 
 # Install Arial font
 FROM debian:latest as fonts
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends ttf-mscorefonts-installer && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends ttf-mscorefonts-installer
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
 
 # JDK 8
 FROM openjdk:8
