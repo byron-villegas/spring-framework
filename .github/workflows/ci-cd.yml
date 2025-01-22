@@ -80,7 +80,7 @@ jobs:
     - name: Create JMeter Result Directory
       run: sudo mkdir -p /performance-test/jmeter-result
     - name: Run JMeter Performance Tests
-      run: sudo ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=10 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /performance-test/jmeter-result
+      run: sudo ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=2 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /performance-test/jmeter-result
     - uses: actions/upload-artifact@v4
       with:
         name: jmeter-results
