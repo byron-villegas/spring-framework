@@ -40,7 +40,7 @@ public class FileUtil {
 
             return fileContents.toString();
         } catch(Exception ex) {
-            throw new FileSystemNotFoundException("Archivo no encontrado");
+            throw new FileSystemNotFoundException("Archivo no encontrado " + ex.getMessage());
         }
     }
 }
