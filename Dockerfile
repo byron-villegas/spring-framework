@@ -7,6 +7,12 @@ RUN gradle build
 # JDK 8
 FROM openjdk:8
 
+# Install Arial font
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ttf-mscorefonts-installer && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
