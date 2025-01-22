@@ -7,6 +7,7 @@ RUN gradle build
 # Install Arial font
 FROM debian:latest as fonts
 
+RUN echo "deb http://deb.debian.org/debian bookworm contrib non-free" > /etc/apt/sources.list.d/contrib.list
 RUN apt-get update
 RUN apt-get install -y ttf-mscorefonts-installer
 RUN apt-get clean
