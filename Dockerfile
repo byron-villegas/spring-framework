@@ -16,5 +16,5 @@ RUN mkdir /app
 # Copy jar from build to /app dir
 COPY --from=build /project/src/build/libs/springframework-1.0.0.jar /app/app.jar
 
-# java -jar /app/app.jar
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+# java -Xms256m -Xmx256m -jar /app/app.jar
+ENTRYPOINT ["java","-Xms256m", "-Xmx256m", "-jar","/app/app.jar"]
