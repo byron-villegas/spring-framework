@@ -118,7 +118,7 @@
 			</textField>
 			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle">
 				<reportElement x="340" y="29" width="247" height="223"/>
-				<imageExpression class="java.lang.String"><![CDATA["./images/AvatarGato.jpg"]]></imageExpression>
+				<imageExpression class="java.lang.String"><![CDATA["images/AvatarGato.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</summary>
