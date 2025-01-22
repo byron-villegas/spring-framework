@@ -6,7 +6,10 @@ import acceptance.dto.LoginRequestDTO;
 import acceptance.dto.LoginResponseDTO;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.junit.Assert;
+
 import java.util.Properties;
 
 public class LoginUtil {
@@ -30,9 +33,10 @@ public class LoginUtil {
                 .password(password)
                 .build();
 
-        Properties properties = PropertiesUtil.getPropertiesByFile("dev/dev.properties");
+        Properties properties = PropertiesUtil
+                .getPropertiesByFile(BaseSteps.AMBIENTE + "/" + BaseSteps.AMBIENTE + ".properties");
 
-        TOKEN = restAssuredClient
+       Response response = restAssuredClient
                 .given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
@@ -43,9 +47,11 @@ public class LoginUtil {
                 .post(urlLogin)
                 .then()
                 .extract()
-                .response()
-                .getBody()
-                .as(LoginResponseDTO.class)
+                .response();
+
+        Assert.assertEquals(200, response.getStatusCode());
+
+        TOKEN = response.as(LoginResponseDTO.class)
                 .getAccessToken();
     }
 }

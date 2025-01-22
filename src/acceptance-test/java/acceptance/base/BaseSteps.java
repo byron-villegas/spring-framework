@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class BaseSteps {
+    public static final String AMBIENTE = System.getenv("AMBIENTE");
     private static final String HOST = System.getenv("HOST");
     private static final String PORT = System.getenv("PORT");
     private static final String CONTEXT_PATH = System.getenv("CONTEXT_PATH");
