@@ -2,7 +2,9 @@ package cl.springframework.util;
 
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
 import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,16 +24,21 @@ public class FileUtil {
 
     public static String getFileContent(String filePath) {
         try {
-            Path path = Paths
-                    .get(FileUtil.class.getClassLoader().getResource(filePath).toURI());
+            ClassPathResource classPathResource = new ClassPathResource(filePath,
+                    FileUtil.class.getClassLoader());
 
-            Stream<String> lines = Files.lines(path);
+            StringBuilder fileContents = new StringBuilder();
 
-            String data = lines.collect(Collectors.joining("\n"));
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(classPathResource.getInputStream()))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    fileContents
+                            .append(line)
+                            .append("\n");
+                }
+            }
 
-            lines.close();
-
-            return data;
+            return fileContents.toString();
         } catch(Exception ex) {
             throw new FileSystemNotFoundException("Archivo no encontrado");
         }

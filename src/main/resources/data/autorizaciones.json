@@ -1,10 +1,10 @@
 [
   {
     "basic": "EST9jmXp4CPOvSbpwWENDgIS4Nk1BeNcYfPvkON+OCU=",
-    "rol": "ROLE_USER"
+    "rol": "USER"
   },
   {
     "basic": "PFHjqu0mhAoCc8Ug4LFa1g==",
-    "rol": "ROLE_ADMINISTRATOR"
+    "rol": "ADMINISTRATOR"
   }
 ]
