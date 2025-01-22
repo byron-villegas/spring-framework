@@ -8,7 +8,7 @@ RUN gradle build
 FROM debian:latest as fonts
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends ttf-mscorefonts-installer
+RUN apt-get install -y ttf-mscorefonts-installer
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
