@@ -63,28 +63,8 @@ jobs:
         with:
           name: deploy
           path: deploy.json
-      - name: Sleep By Six Minutes
-        run: sleep 360
-  performance-test:
-    needs: [deploy]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Install JMeter
-      run: |
-        wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
-        tar -xzf apache-jmeter-5.5.tgz
-        sudo mv apache-jmeter-5.5 /opt/apache-jmeter
-        echo "JMETER_HOME=/opt/apache-jmeter" >> $GITHUB_ENV
-    - name: Create JMeter Result Directory
-      run: sudo mkdir -p /performance-test/jmeter-result
-    - name: Run JMeter Performance Tests
-      run: sudo ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=2 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /performance-test/jmeter-result
-    - uses: actions/upload-artifact@v4
-      with:
-        name: jmeter-results
-        path: /performance-test/jmeter-result
+      - name: Sleep By Five Minutes
+        run: sleep 300
   acceptance-test:
     needs: [deploy]
     runs-on: ubuntu-latest
@@ -111,3 +91,23 @@ jobs:
         with:
           name: acceptanceTest
           path: build/reports/tests/acceptanceTest
+  performance-test:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Install JMeter
+      run: |
+        wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
+        tar -xzf apache-jmeter-5.5.tgz
+        sudo mv apache-jmeter-5.5 /opt/apache-jmeter
+        echo "JMETER_HOME=/opt/apache-jmeter" >> $GITHUB_ENV
+    - name: Create JMeter Result Directory
+      run: sudo mkdir -p /performance-test/jmeter-result
+    - name: Run JMeter Performance Tests
+      run: sudo ${{ env.JMETER_HOME }}/bin/jmeter -n -t performance-test/java-springframework.jmx -JvPROTOCOL=https -JvHOST="springframework.onrender.com" -JvPORT=443 -JvCONTEXT=/api -JvVERSION=/ -JvAMBIENTE=dev -JvTHREADS=2 -JvTIMEOUT=8000 -JvRAMP_UP=1 -LDEBUG -l test_results.jtl -e -o /performance-test/jmeter-result
+    - uses: actions/upload-artifact@v4
+      with:
+        name: jmeter-results
+        path: /performance-test/jmeter-result
